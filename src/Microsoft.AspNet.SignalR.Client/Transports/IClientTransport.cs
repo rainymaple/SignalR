@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AspNet.SignalR.Client.Transports
 {
-    public interface IClientTransport : IDisposable
+    public interface IClientTransport //: IDisposable
     {
         string Name { get; }
         bool SupportsKeepAlive { get; }
