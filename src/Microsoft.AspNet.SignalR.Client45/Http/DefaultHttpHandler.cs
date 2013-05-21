@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.md in the project root for license information.
 
 using System;
-#if !NETFX_CORE
+#if !NETFX_CORE && !PORTABLE
 using System.Security.Cryptography.X509Certificates;
 #endif
 using System.Net.Http;
