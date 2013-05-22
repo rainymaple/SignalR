@@ -35,7 +35,7 @@ namespace Microsoft.AspNet.SignalR.Infrastructure
             _maxSize = maxSize;
         }
 
-#if !CLIENT_NET45 && !PORTABLE
+#if !CLIENT_NET45
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "This is shared code.")]
         public IPerformanceCounter QueueSizeCounter { get; set; }
 #endif
@@ -74,7 +74,7 @@ namespace Microsoft.AspNet.SignalR.Infrastructure
                     // Increment the size if the queue
                     Interlocked.Increment(ref _size);
                     
-#if !CLIENT_NET45 && !PORTABLE
+#if !CLIENT_NET45
                     var counter = QueueSizeCounter;
                     if (counter != null)
                     {
@@ -93,7 +93,7 @@ namespace Microsoft.AspNet.SignalR.Infrastructure
                             // Decrement the number of items left in the queue
                             Interlocked.Decrement(ref queue._size);
 
-#if !CLIENT_NET45 && !PORTABLE
+#if !CLIENT_NET45
                             var counter = QueueSizeCounter;
                             if (counter != null)
                             {

@@ -732,7 +732,7 @@ namespace Microsoft.AspNet.SignalR.Client
         {
 #if PORTABLE
             // http://msdn.microsoft.com/en-us/library/ff637320(VS.95).aspx
-            request.UserAgent = CreateUserAgentString("SignalR.Client.Portable");
+            // request.UserAgent = CreateUserAgentString("SignalR.Client.Portable");
 #elif NETFX_CORE
             request.UserAgent = CreateUserAgentString("SignalR.Client.WinRT");
 #elif NET45

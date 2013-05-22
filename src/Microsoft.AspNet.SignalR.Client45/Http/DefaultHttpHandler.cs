@@ -34,7 +34,7 @@ namespace Microsoft.AspNet.SignalR.Client.Http
                 CookieContainer = _connection.CookieContainer;
             }
 
-#if !SILVERLIGHT
+#if !PORTABLE
             if (Proxy != null)
             {
                 Proxy = Proxy;
